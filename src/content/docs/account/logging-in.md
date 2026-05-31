@@ -23,7 +23,7 @@ ps3 login --server https://personals3.tech
 # you'll be prompted for email + password interactively
 ```
 
-The CLI stores a session under `~/.config/ps3/` and reuses it for every subsequent command. To switch accounts:
+The CLI stores a session under `~/.ps3/config.json` and reuses it for every subsequent command. To switch accounts:
 
 ```bash
 ps3 logout
