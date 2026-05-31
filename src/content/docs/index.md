@@ -14,9 +14,9 @@ This documentation walks through each one. Skim the section that matches how you
 
 ## Where to start
 
-- **First time here?** Start with [Account & access](./account/requesting-an-account) → request an account, then install the CLI.
-- **Got an account?** Jump to [Uploading files](./uploading/choosing-an-upload-method).
-- **Building an integration?** Read [Uploading via the HTTP API](./uploading/single-put-api) and [API keys](./account/api-keys).
+- **First time here?** Start with [Account & access](/account/requesting-an-account/) → request an account, then install the CLI.
+- **Got an account?** Jump to [Uploading files](/uploading/choosing-an-upload-method/).
+- **Building an integration?** Read [Uploading via the HTTP API](/uploading/single-put-api/) and [API keys](/account/api-keys/).
 
 ## What this isn't
 

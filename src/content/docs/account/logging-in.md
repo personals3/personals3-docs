@@ -8,7 +8,7 @@ You sign in three ways depending on what you're doing:
 |---|---|
 | **Dashboard** | Email + password (plus a 2FA code if you've turned that on) |
 | **`ps3` CLI** | Email + password the first time → CLI stores a long-lived session token |
-| **HTTP API / external tools** | An [API key](./api-keys) (recommended) or an AWS-style access key + secret |
+| **HTTP API / external tools** | An [API key](/account/api-keys/) (recommended) or an AWS-style access key + secret |
 
 ## In the dashboard
 

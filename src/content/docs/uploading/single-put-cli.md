@@ -42,7 +42,7 @@ If `ps3 cp` exits non-zero, it prints the server's error message. The most commo
 
 | Error | What it means | Fix |
 |---|---|---|
-| `QUOTA_EXCEEDED` | You don't have enough space | [Free files](../files/list-download-delete) or [request more](../quotas/need-more-space) |
+| `QUOTA_EXCEEDED` | You don't have enough space | [Free files](/files/list-download-delete/) or [request more](/quotas/need-more-space/) |
 | `NO_SUCH_BUCKET` | The bucket name in the destination doesn't exist | Create it via the dashboard or `ps3 bucket create <name>` |
 | `DISK_FULL` | The administrator's disk is past its safety threshold | Contact the administrator — there's nothing you can do client-side |
 | `connection refused` | The CLI can't reach the server | Re-check `ps3 login --server …` URL |

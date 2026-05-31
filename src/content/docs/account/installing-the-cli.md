@@ -65,7 +65,7 @@ ps3 cp ./photo.jpg my-bucket/photos/photo.jpg
 ps3 ls my-bucket/
 ```
 
-If you hit any errors, the [Troubleshooting](../troubleshooting/upload-errors)
+If you hit any errors, the [Troubleshooting](/troubleshooting/upload-errors/)
 page covers the common ones.
 
 ---
@@ -117,7 +117,7 @@ A `checksums.txt` is published alongside each release for verification with `sha
 <details>
 <summary>Use an API key instead of a password (for scripts)</summary>
 
-Create an [API key](./api-keys) in the dashboard, then:
+Create an [API key](/account/api-keys/) in the dashboard, then:
 
 ```bash
 ps3 login --server https://personals3.tech --token "psk_…"

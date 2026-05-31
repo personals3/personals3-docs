@@ -22,8 +22,8 @@ Drop a file with the same name and it replaces the previous content. The old ver
 
 ## Got a 507 / "Insufficient Storage"
 
-You've hit your quota. See [When you hit your limit](../quotas/when-you-hit-your-limit) for what to do.
+You've hit your quota. See [When you hit your limit](/quotas/when-you-hit-your-limit/) for what to do.
 
 ## Got a different error
 
-See [Upload errors](../troubleshooting/upload-errors).
+See [Upload errors](/troubleshooting/upload-errors/).

@@ -30,7 +30,7 @@ curl -X PUT "$HOST/api/my-bucket/photos/photo.jpg" \
 
 | Header | Required? | What to put |
 |---|---|---|
-| **`Authorization`** | **Yes** | `Bearer <your-key>` — use either a `psk_…` [API key](../account/api-keys) or your dashboard JWT |
+| **`Authorization`** | **Yes** | `Bearer <your-key>` — use either a `psk_…` [API key](/account/api-keys/) or your dashboard JWT |
 | **`Content-Type`** | Recommended | The file's MIME type. If you skip it we default to `application/octet-stream`. Browsers and the dashboard preview rely on this. |
 | **`Content-Length`** | Recommended | Helps us quota-check before reading the body. With chunked transfer encoding we measure as we go and reject when we overflow. |
 | **`If-None-Match: "*"`** | Optional | Refuse to overwrite if an object already exists at this key. Returns `412 Precondition Failed`. |
@@ -90,4 +90,4 @@ Every error uses the same envelope:
 
 ## When to use multipart instead
 
-If your file is over a few hundred MB **and** your connection is unreliable, single `PUT` makes a network hiccup wipe out the whole transfer. See [Multipart over the API](./multipart-api) for the resumable version.
+If your file is over a few hundred MB **and** your connection is unreliable, single `PUT` makes a network hiccup wipe out the whole transfer. See [Multipart over the API](/uploading/multipart-api/) for the resumable version.

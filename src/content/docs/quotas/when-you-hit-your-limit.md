@@ -29,8 +29,8 @@ The dashboard renders this message as a friendly card with the same numbers.
 
 ## What to do
 
-1. **Free space** — see [What counts toward your quota](./what-counts) for the quickest wins (empty trash, drop transcodes you don't need).
-2. **Ask for more** — see [Need more space?](./need-more-space). A 100 MB starter account can grow as needed.
+1. **Free space** — see [What counts toward your quota](/quotas/what-counts/) for the quickest wins (empty trash, drop transcodes you don't need).
+2. **Ask for more** — see [Need more space?](/quotas/need-more-space/). A 100 MB starter account can grow as needed.
 
 ## Special case — transcoded media
 

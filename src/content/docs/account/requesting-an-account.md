@@ -8,7 +8,7 @@ PersonalS3 accounts are administrator-approved — there's no self-signup link t
 2. **The administrator reviews it.** They get an email when your request lands.
 3. **You get an email back** — approval includes a verification code that you use to set your first password. Denial includes a brief note.
 
-Approval usually arrives within a day or two. Every approved account starts with **100 MB of free storage**. Need more later? See [Asking for more space](../quotas/need-more-space).
+Approval usually arrives within a day or two. Every approved account starts with **100 MB of free storage**. Need more later? See [Asking for more space](/quotas/need-more-space/).
 
 ## What to put in the form
 
@@ -35,5 +35,5 @@ Click "**Set your password**" on the sign-in page, paste the code, choose a pass
 
 - Check spam.
 - Wait 10 minutes — admin notification mail is queued.
-- Use the "[Forgot password](../account/logging-in#i-forgot-my-password)" flow with the same email — if the admin approved you, that flow also works to set a password.
+- Use the "[Forgot password](/account/logging-in/#i-forgot-my-password)" flow with the same email — if the admin approved you, that flow also works to set a password.
 - If still nothing, contact the administrator of this instance directly.
