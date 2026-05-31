@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "personals3-docs",
+  "compatibility_date": "2025-09-01",
+  // Static-only deploy: just serve the contents of ./dist/ from the edge.
+  // No `main` field on purpose — that's what tells wrangler this is a pure
+  // static site, not a Worker. Stops it from auto-running `astro add cloudflare`
+  // and dragging in the SSR adapter, KV/Images bindings, and Node.js shims
+  // the docs site doesn't need.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
