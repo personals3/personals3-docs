@@ -20,7 +20,7 @@ uploaded ./big-archive.tar → my-bucket/archives/big-archive.tar (10.00 GB)
 
 The CLI aborts the multipart upload server-side before it exits, so you're not charged for orphan parts. Re-running the command starts fresh.
 
-> **Resumability is on the roadmap.** Right now `ps3 cp` doesn't keep state across runs — a Ctrl-C means starting over on the next attempt. If you need true resume today, [drive the multipart flow via the API](./multipart-api.md) and persist the `uploadId` yourself.
+> **Resumability is on the roadmap.** Right now `ps3 cp` doesn't keep state across runs — a Ctrl-C means starting over on the next attempt. If you need true resume today, [drive the multipart flow via the API](./multipart-api) and persist the `uploadId` yourself.
 
 ## Recursive uploads of folders
 

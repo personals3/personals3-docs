@@ -2,31 +2,100 @@
 title: Installing the `ps3` CLI
 ---
 
-The `ps3` binary is the easiest way to script PersonalS3 from your machine or a server.
+## Do you need the CLI?
 
-## One-line install (Linux / macOS)
+**Most people don't.** If you just want to upload, share, and stream files,
+the [dashboard at personals3.tech](https://personals3.tech) does everything
+in your browser — sign in, drag-and-drop, listen to music, watch videos.
+
+**Install the CLI if** you want to:
+
+- Automate uploads or downloads from a script
+- Move large folders in one command
+- Use PersonalS3 as a backend from your own app or another tool
+
+If none of that applies, you can skip this page entirely.
+
+---
+
+## Install (macOS / Linux)
+
+Copy this into your terminal:
 
 ```bash
 curl -fsSL https://personals3.tech/install | sh
 ```
 
-That script detects your OS + CPU architecture, downloads the matching binary from the [latest GitHub release](https://github.com/personals3/cli/releases/latest), verifies the checksum, and drops `ps3` into `/usr/local/bin/` (or `~/.local/bin/` if you can't write to system paths).
+That's it. The installer figures out your OS + CPU, downloads the right
+binary, and puts it where it needs to go. When it finishes, run:
 
-### Pin to a specific version
+```bash
+ps3 --version
+```
+
+You should see something like `ps3 v0.1.0`.
+
+> Don't have a terminal? On macOS press `⌘ + Space` and type "Terminal".
+> On Linux, search the apps menu for "Terminal" or "Konsole".
+
+## Install (Windows)
+
+1. Open the [latest release](https://github.com/personals3/cli/releases/latest)
+2. Download `ps3_<version>_windows_amd64.zip`
+3. Extract it — you'll get a file called `ps3.exe`
+4. Move `ps3.exe` to a folder on your `PATH` (or just to your Desktop and run it from there)
+5. Open a Command Prompt or PowerShell and run `ps3 --version`
+
+## Sign in
+
+Once `ps3` is installed:
+
+```bash
+ps3 login --server https://personals3.tech
+```
+
+It'll ask for your email and password — same ones you use on the website.
+After that, `ps3` remembers you on this machine for 24 hours.
+
+## A first command to try
+
+```bash
+ps3 bucket list             # see your buckets
+ps3 cp ./photo.jpg my-bucket/photos/photo.jpg
+ps3 ls my-bucket/
+```
+
+If you hit any errors, the [Troubleshooting](../troubleshooting/upload-errors)
+page covers the common ones.
+
+---
+
+## Advanced installs
+
+<details>
+<summary>Pin to a specific version</summary>
 
 ```bash
 curl -fsSL https://personals3.tech/install | sh -s -- v0.1.0
 ```
 
-### Install into a non-default location
+</details>
+
+<details>
+<summary>Install into a folder you can write to (no sudo)</summary>
 
 ```bash
 PS3_INSTALL_DIR=$HOME/bin curl -fsSL https://personals3.tech/install | sh
 ```
 
-## Manual download
+Then make sure `$HOME/bin` is on your `PATH`.
 
-If you'd rather grab the tarball yourself, pre-built archives are on the [GitHub Releases page](https://github.com/personals3/cli/releases/latest):
+</details>
+
+<details>
+<summary>Manual tarball download</summary>
+
+Pre-built archives are on the [GitHub Releases page](https://github.com/personals3/cli/releases/latest):
 
 | OS | Archive |
 |---|---|
@@ -37,44 +106,34 @@ If you'd rather grab the tarball yourself, pre-built archives are on the [GitHub
 | Windows | `ps3_<version>_windows_amd64.zip` |
 
 ```bash
-# Extract and install (Linux/macOS)
 tar -xzf ps3_*_linux_amd64.tar.gz
 sudo install -m 0755 ps3 /usr/local/bin/ps3
-ps3 --version
 ```
 
-A `checksums.txt` file is published alongside each release for verification with `sha256sum -c`.
+A `checksums.txt` is published alongside each release for verification with `sha256sum -c`.
 
-## Windows
+</details>
 
-Download the `.zip`, extract `ps3.exe`, and add it to a directory on your `PATH` (anywhere in `%USERPROFILE%\bin` works).
+<details>
+<summary>Use an API key instead of a password (for scripts)</summary>
 
-## First sign-in
-
-```bash
-ps3 login --server https://personals3.tech
-```
-
-You'll be prompted for your email and password. The CLI stores a session locally — subsequent commands just work:
-
-```bash
-ps3 bucket list
-ps3 cp ./photo.jpg my-bucket/photos/photo.jpg
-ps3 ls my-bucket/
-```
-
-If you want a script-friendly login (no prompt), use an [API key](./api-keys.md):
+Create an [API key](./api-keys) in the dashboard, then:
 
 ```bash
 ps3 login --server https://personals3.tech --token "psk_…"
 ```
 
-## Shell completion
+</details>
+
+<details>
+<summary>Shell tab-completion</summary>
 
 ```bash
-ps3 completion bash > /etc/bash_completion.d/ps3       # bash
-ps3 completion zsh  > "${fpath[1]}/_ps3"               # zsh
+ps3 completion bash > /etc/bash_completion.d/ps3
+ps3 completion zsh  > "${fpath[1]}/_ps3"
 ps3 completion fish > ~/.config/fish/completions/ps3.fish
 ```
 
-Restart your shell, then `ps3 <Tab>` autocompletes commands, bucket names, and (where it makes sense) remote keys.
+Restart your shell — then `ps3 <Tab>` autocompletes commands and bucket names.
+
+</details>

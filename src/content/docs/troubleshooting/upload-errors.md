@@ -6,7 +6,7 @@ The most common ones, with the fix on the same line.
 
 | You see | What's happening | Fix |
 |---|---|---|
-| `507 QUOTA_EXCEEDED` | You don't have enough quota for this file (or part) | [Free space](../quotas/what-counts.md) or [request more](../quotas/need-more-space.md) |
+| `507 QUOTA_EXCEEDED` | You don't have enough quota for this file (or part) | [Free space](../quotas/what-counts) or [request more](../quotas/need-more-space) |
 | `507 DISK_FULL` | The host machine's disk is past the admin's safety threshold | Nothing you can do client-side. Tell the administrator. |
 | `400 INVALID_KEY` | The key has illegal characters or is empty | Use printable UTF-8; no leading slashes; non-empty |
 | `400 BUCKET_MISMATCH` | (multipart only) The bucket in the part URL doesn't match the one used to initiate | Use the same bucket throughout the upload's lifecycle |

@@ -9,7 +9,7 @@ A summary of the four less-than-happy states a transcode can end up in, with the
 | `pending` for hours | Worker hasn't picked it up yet | Tell the admin — usually the worker container is down |
 | `processing` for hours | FFmpeg is stuck or the file is genuinely huge | Click **Cancel & restart** — picks a fresh attempt |
 | `failed` | FFmpeg crashed past the retry limit; segments reaped | Click **Retry**. If it fails repeatedly, the source file is probably corrupt |
-| `skipped_quota` | Pre-flight estimated the transcode would push you over quota; no encoding ran | [Free space](../quotas/what-counts.md), then click **Retry (need more space)** |
+| `skipped_quota` | Pre-flight estimated the transcode would push you over quota; no encoding ran | [Free space](../quotas/what-counts), then click **Retry (need more space)** |
 | `failed_quota` | Actual output exceeded the reservation; segments reaped at publish | Same — free space + retry. Estimate may have been too low for this particular file |
 
 Originals are preserved in every state. Only the streaming variants are at risk.

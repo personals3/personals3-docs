@@ -19,4 +19,4 @@ The active upload tries to continue while the tab is open. Closing the tab cance
 
 ## I want resumable uploads across tabs / page reloads
 
-That's not in the browser yet. For very large uploads where this matters, use [the CLI](./multipart-cli.md) or roll your own [multipart over the API](./multipart-api.md) — both store the `uploadId` and resume cleanly.
+That's not in the browser yet. For very large uploads where this matters, use [the CLI](./multipart-cli) or roll your own [multipart over the API](./multipart-api) — both store the `uploadId` and resume cleanly.

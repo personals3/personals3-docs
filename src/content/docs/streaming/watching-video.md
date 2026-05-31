@@ -48,7 +48,7 @@ The master manifest lists every rendition (1080p / 720p / 480p / 360p — whiche
 Either:
 
 - Make the bucket public — every file becomes accessible at `/public/{bucket}/{key}`
-- Create a [pre-signed URL](../files/sharing.md) for the playable file — the watch page works with the same URL pattern under `/watch/share/...` (planned in next release; for now share the public URL or a download link)
+- Create a [pre-signed URL](../files/sharing) for the playable file — the watch page works with the same URL pattern under `/watch/share/...` (planned in next release; for now share the public URL or a download link)
 
 ## Common playback issues
 
