@@ -1,0 +1,56 @@
+/* Warm-stone palette matching the PersonalS3 dashboard. */
+:root {
+  /* Light mode */
+  --sl-color-accent-low: #f3ead9;
+  --sl-color-accent: #b8843a;
+  --sl-color-accent-high: #6b4a1f;
+
+  --sl-color-white: #1f1815;
+  --sl-color-gray-1: #2a221d;
+  --sl-color-gray-2: #4a3f37;
+  --sl-color-gray-3: #6b5e54;
+  --sl-color-gray-4: #8e8077;
+  --sl-color-gray-5: #b4a89e;
+  --sl-color-gray-6: #d4c7b9;
+  --sl-color-gray-7: #ebe1d3;
+  --sl-color-black: #fdf8ee;
+}
+
+:root[data-theme="dark"] {
+  --sl-color-accent-low: #3c2d18;
+  --sl-color-accent: #d4a574;
+  --sl-color-accent-high: #f5d9a8;
+
+  --sl-color-white: #f5f1eb;
+  --sl-color-gray-1: #e0d8cd;
+  --sl-color-gray-2: #b4a89e;
+  --sl-color-gray-3: #8e8077;
+  --sl-color-gray-4: #6b5e54;
+  --sl-color-gray-5: #4a3f37;
+  --sl-color-gray-6: #2a221d;
+  --sl-color-gray-7: #1f1815;
+  --sl-color-black: #15110e;
+}
+
+/* "Open Dashboard" button injected via the header — top-right CTA. */
+.dashboard-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  background: var(--sl-color-accent);
+  color: var(--sl-color-black);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+.dashboard-cta:hover {
+  filter: brightness(1.1);
+}
+.dashboard-cta::after {
+  content: "↗";
+  font-weight: 400;
+  opacity: 0.7;
+}
