@@ -14,7 +14,7 @@ You can also **Abort** at any time to throw away in-progress parts and free your
 
 ```bash
 TOKEN="psk_a4b2c8d1.f0e9d8c7…"
-HOST="https://your-instance.example"
+HOST="https://personals3.tech"
 BUCKET="my-bucket"
 KEY="archives/big.tar"
 FILE="./big.tar"

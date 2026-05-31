@@ -14,15 +14,15 @@ Plus a per-file standalone listener page at `/listen/{bucket}/{key}`.
 
 | Resource | URL |
 |---|---|
-| HLS master | `https://your-instance.example/stream/{object-id}/master.m3u8` |
-| MP3 | `https://your-instance.example/stream/{object-id}/audio.mp3` |
-| OGG | `https://your-instance.example/stream/{object-id}/audio.ogg` |
-| Standalone player page | `https://your-instance.example/listen/{bucket}/{key}` |
+| HLS master | `https://personals3.tech/stream/{object-id}/master.m3u8` |
+| MP3 | `https://personals3.tech/stream/{object-id}/audio.mp3` |
+| OGG | `https://personals3.tech/stream/{object-id}/audio.ogg` |
+| Standalone player page | `https://personals3.tech/listen/{bucket}/{key}` |
 
 ## Embedding
 
 ```html
-<audio controls src="https://your-instance.example/stream/{object-id}/audio.mp3"></audio>
+<audio controls src="https://personals3.tech/stream/{object-id}/audio.mp3"></audio>
 ```
 
 For HLS audio in browsers without native support, use the same `hls.js` snippet from the video page.

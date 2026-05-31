@@ -5,17 +5,17 @@ title: Watching video
 Once a video's `transcode` status hits `done`, three places give you playback:
 
 1. **Dashboard preview** — click the file, the inline player auto-loads the HLS master.
-2. **Standalone watch page** — `https://your-instance.example/watch/{bucket}/{key}` opens just the player, no chrome. Shareable to anyone who has access to the file.
+2. **Standalone watch page** — `https://personals3.tech/watch/{bucket}/{key}` opens just the player, no chrome. Shareable to anyone who has access to the file.
 3. **Embed in your own page** — the HLS master URL is a standard `.m3u8`; drop it into video.js, Shaka Player, or any HTML5 player.
 
 ## The URLs
 
 | Resource | URL |
 |---|---|
-| HLS master | `https://your-instance.example/stream/{object-id}/master.m3u8` |
-| Per-quality playlist | `https://your-instance.example/stream/{object-id}/720p/playlist.m3u8` |
-| Thumbnails | `https://your-instance.example/stream/{object-id}/thumb_0.jpg` (and `_1`, `_2`, `_3` at 0/25/50/75% of duration) |
-| Standalone player page | `https://your-instance.example/watch/{bucket}/{key}` |
+| HLS master | `https://personals3.tech/stream/{object-id}/master.m3u8` |
+| Per-quality playlist | `https://personals3.tech/stream/{object-id}/720p/playlist.m3u8` |
+| Thumbnails | `https://personals3.tech/stream/{object-id}/thumb_0.jpg` (and `_1`, `_2`, `_3` at 0/25/50/75% of duration) |
+| Standalone player page | `https://personals3.tech/watch/{bucket}/{key}` |
 
 `{object-id}` comes from `GET /api/{bucket}/{key}?info` → `objectId`.
 
@@ -27,7 +27,7 @@ Once a video's `transcode` status hits `done`, three places give you playback:
 <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
 <script>
   videojs('player').src({
-    src:  'https://your-instance.example/stream/{object-id}/master.m3u8',
+    src:  'https://personals3.tech/stream/{object-id}/master.m3u8',
     type: 'application/x-mpegURL'
   });
 </script>

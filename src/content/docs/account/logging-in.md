@@ -19,7 +19,7 @@ If you've turned on two-factor authentication, the page will prompt for the 6-di
 ## With the CLI
 
 ```bash
-ps3 login --server https://your-instance.example
+ps3 login --server https://personals3.tech
 # you'll be prompted for email + password interactively
 ```
 
@@ -27,7 +27,7 @@ The CLI stores a session under `~/.config/ps3/` and reuses it for every subseque
 
 ```bash
 ps3 logout
-ps3 login --server https://your-instance.example
+ps3 login --server https://personals3.tech
 ```
 
 ## I forgot my password

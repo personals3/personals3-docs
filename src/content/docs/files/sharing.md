@@ -15,7 +15,7 @@ Two ways to give someone access to a file:
 
 ```bash
 ps3 share my-bucket/file.pdf --expires 7d
-# → https://your-instance.example/share/my-bucket/file.pdf?sig=…&expires=…
+# → https://personals3.tech/share/my-bucket/file.pdf?sig=…&expires=…
 ```
 
 **API**

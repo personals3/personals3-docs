@@ -32,14 +32,14 @@ The part before the dot is a public prefix we use to identify the key in the das
 Send it as a `Bearer` token in the `Authorization` header:
 
 ```bash
-curl https://your-instance.example/api/ \
+curl https://personals3.tech/api/ \
   -H "Authorization: Bearer psk_a4b2c8d1.f0e9d8c7…"
 ```
 
 You can also use a key as the CLI's session token:
 
 ```bash
-ps3 login --server https://your-instance.example --token "psk_a4b2…"
+ps3 login --server https://personals3.tech --token "psk_a4b2…"
 ```
 
 That's useful in CI: bake the key into the environment, the CLI uses it directly, no interactive login.

@@ -4,7 +4,7 @@ title: Single upload — over the HTTP API
 
 ```http
 PUT /api/{bucket}/{key} HTTP/1.1
-Host: your-instance.example
+Host: personals3.tech
 Authorization: Bearer psk_a4b2c8d1.f0e9d8c7…
 Content-Type: image/jpeg
 Content-Length: 1457221
@@ -18,7 +18,7 @@ That's it. One request, file in.
 
 ```bash
 TOKEN="psk_a4b2c8d1.f0e9d8c7…"
-HOST="https://your-instance.example"
+HOST="https://personals3.tech"
 
 curl -X PUT "$HOST/api/my-bucket/photos/photo.jpg" \
   -H "Authorization: Bearer $TOKEN" \
