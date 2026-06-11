@@ -66,6 +66,14 @@ export default defineConfig({
           ],
         },
         {
+          label: "S3 compatibility",
+          items: [
+            { label: "Connecting with AWS tools", slug: "s3-compat/connecting-with-aws-tools" },
+            { label: "How SigV4 works", slug: "s3-compat/how-sigv4-works" },
+            { label: "Differences from Amazon S3", slug: "s3-compat/differences-from-s3" },
+          ],
+        },
+        {
           label: "Quotas",
           items: [
             { label: "What counts toward your quota", slug: "quotas/what-counts" },
